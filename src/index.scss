@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root {
+    --bg-color: #e4e6e8;
+    --white-color: #FFFFFF;
+    --cloud-color: #F8F9FA;
+    --snow-color: #E9EAED;
+    --dark-snow-color: #C7CCD0;
+    --dark-blue-color: #344767;
+    --dark-mud-color: #4F4F52;
+    --dark-black-color: #191919;
+    --gray-color: #7B809A;
+    --medium-gray-color: #DEE2E8;
+    --light-gray-color: #A8B8D8;
+    --blue: #1A73E7;
+    --light-blue: #16C0E8;
+    --red-color: #E91F63;
+    --red-orange: #040404;
+    --green-color: #4CAF50;
+    --light-green: #BCE1BE;
+
+    --black-gradient: linear-gradient(150deg, rgba(62,61,69,1) 0%, rgba(32,32,32,1) 100%);
+    --black-2-gradient: linear-gradient(0, rgba(32,32,32,1) 0%, rgba(62,61,69,1)  100%);
+    --purple-gradient: linear-gradient(0deg, rgba(218,31,99,1) 0%, rgba(233,59,119,1) 100%);
+    --green-gradient: linear-gradient(0deg, rgba(75,166,79,1) 0%, rgba(99,185,103,1) 100%);
+    --blue-gradient: linear-gradient(0deg, rgba(30,120,233,1) 0%, rgba(67,157,238,1) 100%);
+    --orange-gradient: linear-gradient(0deg, rgba(251,142,3,1) 0%, rgba(254,163,33,1) 100%);
+
+    --black-shadow : rgba(0, 0, 0, 0.15) -2px 3px 7px;
+    --black-shadow2 : rgba(0, 0, 0, 0.5) -2px 3px 5px;
+    --red-shadow : #E91F6350 -2px  3px 5px;
+    --green-shadow : #4CAF5050 -2px 3px 5px;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background:  var(--bg-color);
+}
+hr {
+    background: var(--white-color);
+    height: 0.9px;
+}
+
+
+.white-text {
+    color: var(--white-color);
+}
+.bold-text {
+    span{
+        font-weight: 700;
+    }
+}
+.light-text {
+    font-weight: 300;
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+.scale-up-right {
+	-webkit-animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}

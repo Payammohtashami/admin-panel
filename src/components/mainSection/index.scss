@@ -1,0 +1,15 @@
+.main-container {
+    margin-top:40px;
+    width: 100%;
+    
+}
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width: 900px){
+    .main-container{
+        margin-top: 0;
+    }
+}

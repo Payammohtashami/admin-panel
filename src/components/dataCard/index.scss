@@ -1,0 +1,48 @@
+.dataCard-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 23px;
+    margin: 20px 0;
+}
+.dataCard-icon-container {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    transform: translate( 16px, -18px);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    color: var(--white-color);
+    justify-content: center;
+    svg{
+        font-size: 30px;
+    }
+}
+.dataCard-persent {
+    color: var(--green-color);
+    font-size: 16px;
+    font-weight: 700;
+}
+@media(max-width: 1200px) {
+    .dataCard-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media(max-width: 800px) {
+    .dataCard-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 500px) {
+    .dataCard-icon-container{
+        width: 50px;
+        height: 50px;
+        svg{
+            font-size: 25px;
+        }
+    }
+    .dataCard-persent {
+        font-size: 14px;
+    }
+}
