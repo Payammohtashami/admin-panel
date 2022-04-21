@@ -13,7 +13,7 @@ const index = () => {
         }
     }
     const link = {
-        a : {
+        a:{
             padding: "0 15px",
             textDecoration: "none",
         }
@@ -36,19 +36,24 @@ const index = () => {
                 display : "block"
             }
         }
+    const buttonStyle = {
+        color : "var(--gray-color)",
+        fontSize: "12px"
+    }
     return (
         <Box sx={footerStyle}>
             <Box sx={link} className="footer-link">
-                <Link href="#"><Button sx={{color : "var(--gray-color)",fontSize: "12px"}}>About Us</Button></Link>
-                <Link href="#"><Button sx={{color : "var(--gray-color)",fontSize: "12px"}}>Blog</Button></Link>
-                <Link href="#"><Button sx={{color : "var(--gray-color)",fontSize: "12px"}}>License</Button></Link>
+                <Link><Button sx={buttonStyle}>About Us</Button></Link>
+                <Link><Button sx={buttonStyle}>Blog</Button></Link>
+                <Link><Button sx={buttonStyle}>License</Button></Link>
             </Box>
             <Divider sx={dividerStyle}/>
             <Box>
-                <Typography sx={copyRightStyle}>© 2022, made with <span style={{color: "var(--red-color)" , fontSize: "20px"}}>♥</span> by <span style={{fontWeight: "700"}}>Payam</span></Typography>
+                <Typography sx={copyRightStyle}>
+                    © 2022, made with <span sx={{color: "var(--red-color)" , fontSize: "20px"}}>♥</span> by <span sx={{fontWeight: "700"}}>Payam</span>
+                </Typography>
             </Box>
         </Box>
     );
 };
-
 export default index;

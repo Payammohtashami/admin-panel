@@ -1,17 +1,24 @@
 import React from 'react';
+// Components
 import Header from '../header/index';
 import DataCard from '../dataCard/index';
+// Material-UI
+import { Box, Container } from '@mui/material';
 
-import "./index.scss";
 const index = () => {
+  const containerStyle = {
+    marginTop:"40px",
+    "@media(max-width: 900px)" : {
+      marginTop: "00px"
+    }
+  }
   return (
-    <div className="main-container">
-      <div>
+    <Container sx={containerStyle}>
+      <Box>
         <Header />
         <DataCard />
-
-      </div>
-    </div>
+      </Box>
+    </Container>
   );
 };
 

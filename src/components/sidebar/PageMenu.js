@@ -1,8 +1,16 @@
 import React,{useState} from 'react';
-import {List,Typography,Collapse,ListItemButton,ListItemIcon,ListItemText} from '@mui/material';
+// Material-UI
+import {
+    List,
+    Typography,
+    Collapse,ListItemButton,
+    ListItemIcon,
+    ListItemText
+} from '@mui/material';
+import {styled} from "@mui/material/styles"
+// Material-icon
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import {styled} from "@mui/material/styles"
 
 const PageMenu = ({IconUrl,FeildName}) => {
     const [open, setOpen] = useState(false);
@@ -22,9 +30,10 @@ const PageMenu = ({IconUrl,FeildName}) => {
         }
     }
     const RedHover = styled('div')(({ theme }) => ({
-        borderRadius: "4px",
         '&:hover': {
-          backgroundColor: "var(--red-color)",
+            animation: "scale-down-hor-center 0.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards",
+            borderRadius: "4px",
+            backgroundColor: "var(--red-color)",
         }
         
       }));
@@ -52,7 +61,7 @@ const PageMenu = ({IconUrl,FeildName}) => {
                         </ListItemButton>
                     </RedHover>
                         <Collapse in={openProfile}  timeout="auto" unmountOnExit>
-                            <List  component="div" disablePadding>
+                            <List component="div" disablePadding>
                                 <RedHover>
                                     <ListItemButton sx={{ pl: 5 }}>
                                         <ListItemIcon>
@@ -61,13 +70,13 @@ const PageMenu = ({IconUrl,FeildName}) => {
                                     <ListItemText className='font14' primary="Profile Overview" />
                                     </ListItemButton>
                                 </RedHover>
-                            <RedHover>
-                                <ListItemButton sx={{ pl: 5 }}>
-                                    <ListItemIcon>
-                                        <Typography className='white-text'>A</Typography>
-                                    </ListItemIcon>
-                                    <ListItemText className='font14' primary="All project" />
-                                </ListItemButton>
+                                <RedHover>
+                                    <ListItemButton sx={{ pl: 5 }}>
+                                        <ListItemIcon>
+                                            <Typography className='white-text'>A</Typography>
+                                        </ListItemIcon>
+                                        <ListItemText className='font14' primary="All project" />
+                                    </ListItemButton>
                                 </RedHover>
                             <RedHover>
                                 <ListItemButton sx={{ pl: 5 }}>

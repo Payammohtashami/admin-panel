@@ -4,14 +4,13 @@ import MainSection from './components/mainSection/index';
 import Charts from './components/charts/index';
 import Table from './components/table/index';
 import Footer from './components/footer/index';
-import {Grid} from '@mui/material';
 import SidebarContext from './context/OpenContext';
-import SignInContext from './context/SignInContext';
+// Material-UI
+import {Grid} from '@mui/material';
 function App() {
   
   return (
     <SidebarContext>
-      <SignInContext>
         <Grid container spacing={2} sx={{padding: " 0 10px"}}>
           <Grid item lg={2.5} md={3}>
             <Sidebar />
@@ -23,7 +22,6 @@ function App() {
             <Footer />
           </Grid>
         </Grid>
-      </SignInContext>
     </SidebarContext>
   );
 }

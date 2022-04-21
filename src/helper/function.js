@@ -1,8 +1,7 @@
 // Material icon
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import {Dialog} from '@mui/material';
-import SignIn from '../components/sign-in/signIn';
+
 
 function createData(name, Price, order, spend, refuond) {
     return { name, Price, order, spend, refuond };
@@ -19,17 +18,3 @@ export const mark = (num) => {
     if(num > 4) return <ExpandLessIcon style={{color: "var(--green-color)" , transform: "translateY(6px)"}} />
     return <ExpandMoreIcon style={{color: "var(--red-color)" , transform: "translateY(6px)"}} />
 }
-
-export function SimpleDialog(props) {
-    const { onClose, selectedValue, open } = props;
-    
-    const handleClose = () => {
-      onClose(selectedValue);
-    };
-    
-    return (
-      <Dialog onClose={handleClose} open={open}>
-        <SignIn />
-      </Dialog>
-    );
-  }

@@ -59,7 +59,11 @@ hr {
 ::-webkit-scrollbar {
     display: none;
 }
-.scale-up-right {
-	-webkit-animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: scale-up-right 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-}
+@keyframes scale-down-hor-center {
+    0% {
+        margin: 0;
+    }
+    100% {
+        margin: 0 10px;
+    }
+  }

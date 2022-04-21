@@ -1,16 +1,22 @@
 import React,{useContext} from 'react';
-import Typography from '@mui/material/Typography';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
-import HomeIcon from '@mui/icons-material/Home';
+// Components
 import HeaderContainer from './header';
-import { Box, IconButton } from '@mui/material';
+// Material-UI
+import {
+    Typography,
+    Breadcrumbs,
+    Link,
+    Box, 
+    Container, 
+    IconButton 
+} from '@mui/material';
+// Material-icon
+import HomeIcon from '@mui/icons-material/Home';
 import MenuIcon from '@mui/icons-material/Menu';
-
+// Context
 import {SidebarContext} from '../../context/OpenContext';
-
 const Index = () => {
-  const {state, setState} = useContext(SidebarContext)
+  const {setState} = useContext(SidebarContext)
     function handleClick(event) {
         event.preventDefault();
     }
@@ -37,8 +43,13 @@ const Index = () => {
             display: "block"
         }
     }
+    const headerContainer = {
+        width: "100%",
+        display: "flex",
+        justifyContent: "space-between"
+      }
     return (
-        <div className='header-container'>
+        <Container sx={headerContainer}>
             <Box>
                 <Box sx={{display: "flex"}} role="presentation" onClick={handleClick}>
                         <IconButton onClick={() => setState({left: true})} sx={menuIconStyle}>
@@ -57,7 +68,7 @@ const Index = () => {
             <div>
                 <HeaderContainer />
             </div>
-        </div>
+        </Container>
     );
 };
 
